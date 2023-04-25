@@ -1,0 +1,53 @@
+﻿@model List<customer_list.Models.Customer>
+
+@{
+    ViewBag.Title = "Display";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Customer List</h2>
+
+<table align="center">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td>@customer.ID</td>
+            <td>@customer.CustomerName</td>
+            <td>@customer.Address</td>
+        </tr>
+    }
+</table>
+
+<style>
+    h2 {
+        color: red;
+        text-align: center;
+    }
+
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    th {
+        color: cornflowerblue;
+        background-color: #f2f2f2;
+        text-align: left;
+    }
+
+    td {
+        text-align: center;
+    }
+</style>
