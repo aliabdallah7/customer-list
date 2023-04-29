@@ -20,7 +20,7 @@ namespace customer_list.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Customer> customers { get; set; }
+        public DbSet<Customer> customer { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

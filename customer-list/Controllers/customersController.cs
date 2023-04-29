@@ -5,7 +5,7 @@ using System.Web.Mvc;
 
 namespace customer_list.Controllers
 {
-    public class CustomersController : Controller
+    public class customersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
@@ -14,10 +14,10 @@ namespace customer_list.Controllers
             db.Dispose();
         }
 
-        // GET: Customers/Display
+        // GET: customers/Display
         public ActionResult Display()
         {
-            List<Customer> customers = db.customers.ToList();
+            List<Customer> customers = db.customer.ToList();
             return View(customers);
         }
     }
